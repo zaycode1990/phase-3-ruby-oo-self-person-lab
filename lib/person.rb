@@ -60,9 +60,11 @@ class Person
   end
 
   def call_friend(friend)
-    self.happiness += 3
+    # TODO:// Why does happiness method work?
+    # TODO:// I don't need to add the @happiness because #happiness= gets called anyway
+
+    self.happiness = @happiness += 3
     friend.happiness += 3
-    "Hi #{friend}! It's #{self.name}. How are you?"
     "Hi #{friend.name}! It's #{self.name}. How are you?"
   end
 
